@@ -31,4 +31,9 @@ class AdminController extends Controller
         $ad->save();
         return redirect('admin_form')->with('msg', " ✨✨ Insert Record SuccesFully ✨✨");
     }
+    public function viewData(){
+     
+          
+    
+    }
 }

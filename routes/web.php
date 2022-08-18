@@ -28,4 +28,15 @@ use App\Http\Controllers\AdminController;
 
  });
 
+ Route::get('/admin_view',function(){
+
+ 
+          return view('/admin.view'); 
+       
+
+ });
+
  Route::post('/InsertData',[AdminController::class,'InsertData']);
+
+
+ Route::get('/admin.view',[AdminController::class, 'viewData']);
