@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +17,15 @@ use Illuminate\Support\Facades\Route;
 
 
  Route::get('/',function(){
+
      return view('admin.layouts.admin');
  });
+
+
+ Route::get('/admin_form',function(){
+ 
+     return view('admin.form');
+
+ });
+
+ Route::post('/InsertData',[AdminController::class,'InsertData']);
