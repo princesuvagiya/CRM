@@ -39,4 +39,4 @@ use App\Http\Controllers\AdminController;
  Route::post('/InsertData',[AdminController::class,'InsertData']);
 
 
- Route::get('/admin.view',[AdminController::class, 'viewData']);
+ Route::get('/admin_view',[AdminController::class, 'viewData']);

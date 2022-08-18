@@ -5,9 +5,9 @@
 @include('admin.components.header')
       
       <!-- Table Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+            <div class="container-fluid pt-4">
+                <div class="row me-4">
+                    <div>
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Basic Table</h6>
                             <table class="table">
@@ -16,17 +16,20 @@
                                         <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Logo</th>
                                         <th scope="col">Webside</th>
+                                        <th scope="col">Logo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($record as $r)
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>jhon@email.com</td>
+                                        <th scope="row">{{$r->id}}</th>
+                                        <td>{{ $r->name }}</td>
+                                        <td>{{ $r->email }}</td>
+                                        <td>{{ $r->webside }}</td>
+                                        <td><img src='{{ url("images/$r->image")}}' height="50" width="50"></td>
                                     </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

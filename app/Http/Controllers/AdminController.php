@@ -33,7 +33,9 @@ class AdminController extends Controller
     }
     public function viewData(){
      
-          
+         $data = Admin::all();
+         return view('admin.view',['record'=>$data]);
+        //  dd($data->toArray());      
     
     }
 }
