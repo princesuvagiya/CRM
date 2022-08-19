@@ -3,6 +3,16 @@
 @section('content')
 
 @include('admin.components.header')
+
+     @if(session('msg'))
+   
+        <div class="alert alert-success">
+  
+           {{session('msg')}}
+
+        </div>
+
+    @endif   
       
       <!-- Table Start -->
             <div class="container-fluid pt-4">
@@ -28,6 +38,8 @@
                                         <td>{{ $r->email }}</td>
                                         <td>{{ $r->webside }}</td>
                                         <td><img src='{{ url("images/$r->image")}}' height="50" width="50"></td>
+                                        <td><a href='{{ url("deletedata/$r->id") }}'>DELETE</a></td>
+                                        <td><a href='{{ url("updatedata/$r->id") }}'>Edit</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

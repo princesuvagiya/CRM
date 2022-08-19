@@ -40,3 +40,9 @@ use App\Http\Controllers\AdminController;
 
 
  Route::get('/admin_view',[AdminController::class, 'viewData']);
+
+ Route::get('/deletedata/{id}',[AdminController::class, 'DeleteData']);
+
+ Route::get('/updatedata/{id}',[AdminController::class,'UpdateData']);
+
+ Route::post('/editData', [AdminController::class, 'EditData']);
