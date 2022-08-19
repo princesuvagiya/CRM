@@ -29,6 +29,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+    <!-- Livewire Styles -->
+    @livewireStyles
 </head>
 
 <body>

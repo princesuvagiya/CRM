@@ -23,6 +23,9 @@
 <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
 <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
+<!-- Livewire Scripts -->
+@livewireScripts
+
 <!-- Template Javascript -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>

@@ -27,7 +27,7 @@
                             <label
                              for="exampleInputEmail1"
                              class="form-label">
-                             Email name
+                             Enter name
                             </label> 
                             <input
                              type="text"
@@ -43,7 +43,7 @@
                             <label
                              for="exampleInputEmail1"
                              class="form-label">
-                             Email email
+                             Enter email
                             </label>
                             <input
                              type="email"
