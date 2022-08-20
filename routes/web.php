@@ -22,7 +22,6 @@ use App\Http\Controllers\CategoryController;
      return view('admin.layouts.admin');
  });
 
-
  Route::get('/admin_form',function(){
  
      return view('admin.form');
@@ -41,6 +40,17 @@ use App\Http\Controllers\CategoryController;
        return view('/admin.category');
 
  });
+ Route::get('/category_view', function(){
+ 
+      return view('/admin.category_view');
+
+ });
+
+ Route::get('/project_manage', function(){
+     
+       return view('/admin.project');
+     
+ });
 
  Route::post('/InsertData',[AdminController::class,'InsertData']);
 
@@ -55,3 +65,11 @@ use App\Http\Controllers\CategoryController;
 
  Route::post('/categoryData',[CategoryController::class, 'CategoryData']);
  
+ Route::get('/category_view',[CategoryController::class,'CategoryView']);
+
+ Route::get('/categoryDeleteData/{id}',[CategoryController::class, 'CategoryDeleteData']);
+
+ Route::get('/categoryUpdatedata/{id}', [CategoryController::class, 'CategoryUpdateData']);
+
+ Route::post('/EditCategory',[CategoryController::class,'EditCategory']);
+

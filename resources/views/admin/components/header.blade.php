@@ -67,7 +67,8 @@
                     <a href="{{ url('/admin_form') }}" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Companies</a>
                     <a href="{{ url('/admin_view') }}" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Companies Detail</a>
                     <a href="{{ url('/category_add') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Category</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <a href="{{ url('/category_view') }}" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Category view</a>
+                    <a href="{{ url('/project_manage') }}" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Project manage</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
                         <div class="dropdown-menu bg-transparent border-0">
