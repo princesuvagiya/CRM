@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,8 +32,13 @@ use App\Http\Controllers\AdminController;
  Route::get('/admin_view',function(){
 
  
-          return view('/admin.view'); 
+    return view('/admin.view'); 
        
+ });
+
+ Route::get('/category_add', function(){
+           
+       return view('/admin.category');
 
  });
 
@@ -46,3 +52,6 @@ use App\Http\Controllers\AdminController;
  Route::get('/updatedata/{id}',[AdminController::class,'UpdateData']);
 
  Route::post('/editData', [AdminController::class, 'EditData']);
+
+ Route::post('/categoryData',[CategoryController::class, 'CategoryData']);
+ 
