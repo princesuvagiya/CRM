@@ -29,7 +29,7 @@ class ProductController extends Controller
            $ad->budget =$req->get('budget'); 
            $ad->save();
            return redirect("/project_manage")->with('msg',"Record Insert SuccesFylly");
-        //  dd($req->toArray());
+        // dd($req->toArray());
 
                             
       

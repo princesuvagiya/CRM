@@ -53,6 +53,13 @@ use App\Http\Controllers\ProductController;
      
  });
 
+ Route::get("/project_view",function(){
+
+     
+       return view('admin.project_view');
+
+ });
+
  Route::post('/InsertData',[AdminController::class,'InsertData']);
 
 
@@ -77,4 +84,6 @@ use App\Http\Controllers\ProductController;
  Route::get('/project_manage',[ProductController::class,'ProductData']);
 
  Route::post('/insertProjectData',[ProductController::class,'InsertProjectData']);
+
+
 
