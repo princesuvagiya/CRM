@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +73,8 @@ use App\Http\Controllers\CategoryController;
  Route::get('/categoryUpdatedata/{id}', [CategoryController::class, 'CategoryUpdateData']);
 
  Route::post('/EditCategory',[CategoryController::class,'EditCategory']);
+
+ Route::get('/project_manage',[ProductController::class,'ProductData']);
+
+ Route::post('/insertProjectData',[ProductController::class,'InsertProjectData']);
 
