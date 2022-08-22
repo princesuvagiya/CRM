@@ -64,7 +64,7 @@ class AdminController extends Controller
     public function EditData(Request $req){
         //   dd($req->toArray());
  
-        $id = $req->get('admin_id');
+         $id = $req->get('admin_id');
           
          $image = '';
          if($req->file('image')){
@@ -78,10 +78,9 @@ class AdminController extends Controller
             $da =Admin::where('id',$id)->first();
             $path =public_path('images')."/".$da->image;
             if($path){
-    
-                       
-                   @unlink($path);
-    
+
+                @unlink($path);
+                
             }
 
          }else{

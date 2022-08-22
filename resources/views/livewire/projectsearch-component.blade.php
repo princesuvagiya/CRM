@@ -40,8 +40,8 @@
                         <td>{{ $r->employename }}</td>
                         <td>{{ $r->post }}</td>
                         <td>{{ $r->	budget }}</td>
-                        <td><a href='{{ url("deletedata/$r->id") }}' class="btn btn-danger">DELETE</a></td>
-                        <td><a href='{{ url("updatedata/$r->id") }}' class="btn btn-info">Edit</a></td>
+                        <td><a href='{{ url("productdeletedata/$r->id") }}' class="btn btn-danger">DELETE</a></td>
+                        <td><a href='{{ url("productupdatedata/$r->id") }}' class="btn btn-info">Edit</a></td>
                     </tr>
                     @endforeach
                 </tbody>

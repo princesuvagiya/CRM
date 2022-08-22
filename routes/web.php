@@ -62,7 +62,6 @@ use App\Http\Controllers\ProductController;
 
  Route::post('/InsertData',[AdminController::class,'InsertData']);
 
-
  Route::get('/admin_view',[AdminController::class, 'viewData']);
 
  Route::get('/deletedata/{id}',[AdminController::class, 'DeleteData']);
@@ -85,5 +84,8 @@ use App\Http\Controllers\ProductController;
 
  Route::post('/insertProjectData',[ProductController::class,'InsertProjectData']);
 
+ Route::get('/productdeletedata/{id}', [ProductController::class, 'productdeletedata']);
 
+ Route::get('/productupdatedata/{id}',[ProductController::class, 'productupdatedata']);
 
+Route::post('/editProjectData', [ProductController::class, 'EditProjectData']);
