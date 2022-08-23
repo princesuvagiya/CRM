@@ -9,16 +9,13 @@ use DB;
 
 class ProductController extends Controller
 {
-
     public function ProductData()
     {
-
         $categorie = Category::get();
         return view('admin.project', ['categorie' => $categorie]);
     }
     public function InsertProjectData(Request $req)
     {
-
         $ad = new product;
         $ad->categorie_id = $req->get('categorie_id');
         $ad->name = $req->get('name');
@@ -32,22 +29,18 @@ class ProductController extends Controller
     }
     public function productdeletedata($id)
     {
-
         product::where('id', $id)->delete();
         return redirect('/project_view')->with('msg', "Record Deleted SuccesFully");
     }
     public function productupdatedata($id)
     {
-
         $categorie = Category::get();
         $data = product::where('id', $id)->first();
-        return  view('admin.project', ['single' => $data], ['categorie' => $categorie]);
+        return  view('admin.project', ['single' => $data],['categorie' => $categorie]);
     }
     public function EditProjectData(Request $req)
     {
-
         //   dd($req->toArray());
-
         $id = $req->get('project_id');
         $da = product::where('id', $id)->first();
         $data = array(

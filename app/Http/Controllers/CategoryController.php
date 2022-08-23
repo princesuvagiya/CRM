@@ -25,7 +25,6 @@ class CategoryController extends Controller
         $data =Category::all();
         return view('/admin.category_view',['record'=>$data]);
 
-
     }
     public function CategoryDeleteData($id){
  
@@ -40,18 +39,12 @@ class CategoryController extends Controller
 
     }
     public function EditCategory(Request $req){
-
-        //    dd($req->toArray()); 
- 
-         $id =$req->get('category_id');
-         $da =Category::where('id',$id)->first();
-          
+          //dd($req->toArray()); 
+          $id =$req->get('category_id');
+          $da =Category::where('id',$id)->first();
           $data =array('categoryname'=>$req->get('categoryname'));
           Category::where('id',$id)->update($data);
-          return redirect('/category_view')->with('msg',"✨✨ Record Updated SuccessFully ✨✨");
-          
-
-           
+          return redirect('/category_view')->with('msg',"✨✨ Record Updated SuccessFully ✨✨");    
     }
 
 }
