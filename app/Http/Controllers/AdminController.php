@@ -93,9 +93,40 @@ class AdminController extends Controller
         $data =array('name' =>$req->get('name'),'email' =>$req->get('email'),'image'=>$image,'webside'=>$req->get('webside'));
         Admin::where('id',$id)->update($data);
 
-         return redirect('/admin_view')->with('msg'," ✨✨ Record Updated SuccesFully ✨✨");                  
+         return redirect('/admin_view')->with('msg'," ✨✨Record Updated SuccesFully ✨✨");                  
 
 
 
     }
+    public function CheckLogin(Request $req){
+ 
+          $email =$req->get['email']; 
+          $data =Admin::where('email',$email)->first();
+          if(!empty($data)){
+
+              if($data->password == $req->get('password')){
+                     
+                   $req->session()->put('userdata',$data);
+                   return redirect('/');
+              }
+              else
+              {
+
+                return redirect('msg',"Invalid Password");  
+
+              }
+          }
+          else
+          {
+             
+            return redirect('msg',"Invalid Email");
+
+          }
+                   
+              
+          
+
+    }
+
+
 }

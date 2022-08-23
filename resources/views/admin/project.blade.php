@@ -4,6 +4,7 @@
 
 @include('admin.components.header')
 
+
 @if(session('msg'))
 <div class="alert alert-success">
     {{session('msg') }}
@@ -77,4 +78,7 @@
         </div>
     </div>
 </div>    
+
+
+
 @endsection

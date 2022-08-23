@@ -15,7 +15,13 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login',function(){
+ 
+      return view('admin.login');  
+});
 
+
+Route::post('/checklogin',[AdminController::class],'CheckLogin');
 
 
  Route::get('/',function(){
